@@ -11,5 +11,9 @@ services:
     deploy:
       mode: replicated
       replicas: 1
+driver: local-persist
+  driver_opts:
+    mountpoint:"/swarm/volumes/mysql_1"
+    name:"mysql"
 volumes:
   mysql:
